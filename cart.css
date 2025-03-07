@@ -1,0 +1,112 @@
+.section1{
+    padding: 0 60px;
+    height: 800px;
+}
+.section1 h5{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+/* .section1 .form{
+    border: 1px solid black;
+} */
+.section1 .form table{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.section1 .form table th{
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: left;
+    padding:20px 0;
+}
+.section1 .form td{
+    /* border: 1px solid black; */
+    width: 25%;
+}
+.section1 .form td h6{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.section1 .form .flex{
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    /* border: 1px solid green; */
+    align-items: center;
+    width: 100%;
+}
+.section1 .form input{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0,0.3);
+}
+.section1 .cart-actions{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.section1 .cart-actions a{
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid rgb(0, 0, 0,0.3);
+    color: black;
+    font-size: 0.8rem;
+}
+.section1 .cart-actions button{
+    padding: 10px 40px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0,0.3);
+    font-size: 0.8rem;
+}
+.section1 .position-relative{
+    position: relative;
+    margin-top: 50px;
+}
+.section1 .form2{
+    display: flex;
+    gap: 10px;
+}
+.section1 .form2 .input1{
+    width: 200px;
+    padding: 10px;
+}
+.section1 .form2 .input2{
+    padding: 10px 30px;
+    border: none;
+    background-color: #DB4444;
+    color: #FAFAFA;
+}
+
+.section1 .div-absolute{
+    width: 250px;
+    height: 230px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;   
+}
+.section1 .div-absolute h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.section1 .div-absolute .div1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgb(0, 0, 0,0.4);
+}
+.section1 .position-relative a{
+    text-decoration: none;
+    color: #FAFAFA;
+    padding: 10px 20px;
+    background-color: #DB4444;
+    position: relative;
+    top: 10px;
+    left: 55px;
+    font-size: 0.6rem;
+}

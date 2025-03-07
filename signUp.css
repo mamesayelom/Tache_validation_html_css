@@ -1,0 +1,78 @@
+.section1{
+    height: 700px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.section1 .flex{
+    display: flex;
+    gap: 50px;
+}
+.section1 .flex .img{
+    width: 50%;
+}
+.section1 .flex .img img{
+    width: 100%;
+}
+.section1 .flex .form{
+    width:40% ;
+}
+.form {
+    /* padding-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form form input{
+    outline: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0,0,0,0.5);
+   
+}
+.form form .submit{
+    background-color:#DB4444;
+    padding: 10px 0;
+    color: white;
+    margin-bottom: 10px;
+}
+.form form .button{
+    background-color: white;
+    border: 1px solid rgb(0,0,0,0.5);
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.form form .button span{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.form form  .div1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.form form  .div1 p{
+    margin: 0;
+}
+.form form  a{
+    text-decoration: none;
+    color: black;
+}
+.form form .div2{
+    display: flex;
+    justify-content: space-between;
+}
+.form form .div2 button{
+    background-color: #DB4444;
+    padding: 10px 30px;
+    border: none;
+    color: white;
+}
+.form form .div2 a{
+    color: #DB4444;
+}

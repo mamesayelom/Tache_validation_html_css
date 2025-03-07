@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+header .top_header{
+    background-color: black;
+    color: #FAFAFA;
+    font-size: 0.6rem;
+    padding: 10px 0;
+}
+header .center{
+    width: 50%;
+    /* border: 1px solid white; */
+    display: flex;
+    position: relative;
+    left: 40%;
+    justify-content: space-between;  
+}
+header .center a{
+    color: #FAFAFA;
+    font-weight: 600;
+    text-decoration: none;
+}
+header .center .language-selector{
+    display: flex;
+    align-items: center;
+}
+header .center .language-selector select{
+    background-color: black;
+    color: #FAFAFA;
+    appearance: none;
+    border: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    /* border: 1px solid black; */
+}
+nav h1{
+    margin: 0;
+}
+nav .liens_de_navigation{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* border: 1px solid black; */
+}
+nav .liens_de_navigation a{
+    text-decoration: none;
+    color: #000000;
+}
+nav .recherche{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+nav .recherche form{
+    position: relative;
+}
+nav .recherche form input{
+    background-color: #F5F5F5;
+    border: none;
+    padding: 10px;
+    width: 200px;
+}
+nav .recherche form button{
+    position: absolute;
+    background-color: #F5F5F5;
+    border: none;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .recherche a{
+    color: #000000;
+}
+nav .user{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .user:hover{
+    background-color: #DB4444;
+    color: #FAFAFA;
+}
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(150px); 
+    -webkit-backdrop-filter: blur(150px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 180px;
+    list-style: none;
+    padding: 20px;
+}
+
+.dropdown-menu li {
+    color: #FAFAFA;
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    padding-bottom: 10px;  
+}
+
+.dropdown-menu li a {
+    color: #FAFAFA;
+    text-decoration: none;
+    display: block;
+}
+
+/* .dropdown-menu li:hover {
+    background: #f0f0f0;
+} */
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+footer{
+    background-color: #000000;
+    color: #FAFAFA;
+    padding: 50px 60px;
+    padding-bottom: 0;
+    font-size: 0.8rem;
+    position: relative;
+}
+footer h1,footer h2{
+    margin: 0;
+}
+footer h2{
+    font-weight: 500;
+}
+footer .flex{
+    display: flex;
+    justify-content: space-between;
+}
+footer .flex .div1 form{
+    position: relative;
+}
+footer .flex .div1 form input{
+    border: 2px solid #FAFAFA;
+    background-color: black;
+    padding: 10px;
+}
+footer .flex .div1 form button{
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    right: 5px;
+}
+footer .flex .div5 .Qrcode{
+    display: flex;
+    justify-content: space-between;
+}
+footer .flex .div5 .Qrcode .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .flex .div5 .resaux{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+footer .block{
+    text-align: center;
+    margin-top: 60px;
+    
+}
+footer::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.1;
+    top: 304px;
+    left: 0;
+}
+footer .block p{
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
