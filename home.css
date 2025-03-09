@@ -956,6 +956,9 @@ body{
     }
 }
 @media screen and (max-width:500px){
+    .section1,.section2,.section3,.section4,.section5,.section6,.section7{
+        padding: 0 20px;
+    }
     .section2 .top .top_div2 .div2 .heure h2{
         font-size: 0.8rem;
     }
