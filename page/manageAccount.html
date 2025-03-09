@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../checkout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../account.css">
 </head>
 <body>
     <header>
@@ -43,7 +43,7 @@
                     <ul class="dropdown-menu">
                         <li>
                             <img src="images/header/user.png" alt="">
-                            <a href="./manageAccount.html">Manage My Account</a>
+                            <a href="#">Manage My Account</a>
                         </li>
                         <li>
                             <img src="images/header/icon-mallbag.png" alt="">
@@ -68,73 +68,54 @@
     </header>
     <main>
         <section class="section1">
-            <h5>Account / My Account / Product / View-cart / CheckOut</h5>
-            <h1>Billing Details</h1>
-            <div>
-                <form action="" class="form1">
-                    <div class="left">
-                        <label class="label" for="">First Name</label>
-                        <input class="input" type="text">
-                        <label class="label" for="">Company Name</label>
-                        <input class="input" type="text">
-                        <label class="label" for="">Street Address</label>
-                        <input class="input" type="text" name="" id="">
-                        <label class="label" for="">Apartment, floor, etc. (optional)</label>
-                        <input class="input" type="text">
-                        <label class="label" for="">Town/City*</label>
-                        <input class="input" type="text">
-                        <label class="label" for="">Phone Number*</label>
-                        <input class="input" type="text">
-                        <label class="label" for="">Email Address*</label>
-                        <input class="input" type="email">
-                        <input class="check" type="checkbox" checked>
-                        <label for="" style="font-size: 0.8rem;">Save this information for faster check-out next time</label>
-                    </div>
-                    <div class="right">
-                        <div class="flex">
-                             <div class="image">
-                                <img src="../images/cart/g92-2-500x500 1.png" alt="">
-                                
-                                <p>LCD Monitor</p>
-                             </div>
-                             <p>$650</p>
-                        </div>
-                        <div class="flex">
-                            <div class="image">
-                                <img src="../images/cart/g27cq4-500x500 1.png" alt="">
-                                <p>HI Gamepad</p>
-                             </div>
-                             <p>$1100</p>
-                        </div>
-                        <div class="div1">
-                            <p>Subtotal:</p>
-                            <p>$1750</p>
-                        </div>
-                        <div class="div1">
-                            <p>Shipping:</p>
-                            <p>Free</p>
-                        </div>
-                        <div style="border-bottom: none;" class="div1">
-                            <p>Total:</p>
-                            <p>$1750</p>
-                        </div>
-                        <div class="complex-div">
-                            <div class="pay">
-                                <input class="radio" type="radio">
-                                <label for="">Bank</label>
-                            </div>
-                            <img src="../images/cart/Frame 834.png" alt="">
-                        </div>
-                        <input class="radio" type="radio" checked>
-                        <label for="">Cash on delivery</label>
-                        <div class="three">
-                            <input class="input1" type="text" placeholder="Coupon Code">
-                            <input class="input2" type="submit" value="Apply Coupon">
-                        </div>
+            <h5>Home / My Account</h5>
+            <div class="flex">
+                <div class="left">
+                    <h4>Call To Us</h4>
+                    <p style="color: #DB4444;">My Profile</p>
+                    <p>Adress Book</p>
+                    <p>My Payement Options</p>
 
-                        <a href="" class="Place-Order">Place Order</a>
-                    </div>
-                </form>
+                    <h4>My Orders</h4>
+                    <p>My Returns</p>
+                    <p>My Cancellations</p>
+
+                    <h4>My Wishlist</h4>
+                </div>
+                <div class="right">
+                    <h3 style="color: #DB4444;">Edit Your Profile</h3>
+                    <form action="">
+                        <div class="flex1">
+                            <div class="flex2">
+                                <label for="">First Name</label>
+                                <input type="text" placeholder="Md">
+                            </div>
+                            <div class="flex2">
+                                <label for="">Last Name</label>
+                                <input type="text" placeholder="Rimel">
+                            </div>
+                        </div>
+                        <div class="flex1">
+                            <div class="flex2">
+                                <label for="">Email</label>
+                                <input type="email" placeholder="rimel@gmail.com">
+                            </div>
+                            <div class="flex2">
+                                <label for="">Address</label>
+                                <input type="text" placeholder="adress">
+                            </div>
+                        </div>
+                        <label for="">Password Changes</label>
+                        <input type="password" placeholder="Current Password">
+                        <input type="password" placeholder="New Password">
+                        <input type="password" placeholder="Confirm New Password">
+                        <div class="flex-end">
+                            <a href="">Cancel</a>
+                            <button type="submit">Save Change</button>
+                        </div>
+                        
+                    </form>
+                </div>
             </div>
         </section>
     </main>

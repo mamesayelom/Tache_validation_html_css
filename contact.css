@@ -34,7 +34,7 @@
 }
 .section1 .flex .right{
     width: 60%;
-    padding: 20px;
+    padding: 20px 0;
     box-sizing: border-box;
     position: relative;
 }
@@ -63,6 +63,39 @@
     color: white;
     padding: 20px 50px;
     position: absolute;
-    right: 20px;
+    right: 0;
     bottom: 0;
+}
+
+@media screen and (max-width:1000px){
+    .section1 .flex .right form{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .section1 .flex .right form textarea{
+        grid-column: span 1;
+    }
+    .section1{
+        height: 600px;
+    }
+    .section1 .flex .right form button{
+        right: 0;
+        bottom: -80px;
+    }
+
+}
+@media screen and (max-width:700px){
+    .section1{
+        height: 900px;
+    }
+    .section1 .flex{
+        flex-direction: column;
+    }
+    .section1 .flex .left{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .section1 .flex .right{
+        width: 100%;
+    }
 }
