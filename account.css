@@ -68,3 +68,37 @@
     border: none;
     font-size: 0.8rem;
 }
+
+@media screen and (max-width:800px) {
+    .section1{
+        padding: 0 60px;
+        height: 1000px;
+    }
+    .section1 .flex{
+        display: block;
+    }
+    .section1 .flex .left{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .section1 .flex .right{
+        width: 80%;
+    }
+}
+@media screen and (max-width:700px){
+    .section1 .flex .right{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .section1{
+        padding: 0 30px;
+        height: 1200px;
+    }
+    .section1 .flex .right form .flex1{
+        display: block;
+    }
+    .section1 .flex .right form .flex1 .flex2{
+        width: 100%;
+    }
+}

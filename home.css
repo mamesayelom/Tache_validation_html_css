@@ -408,6 +408,7 @@ body{
     margin-top: 100px;
     width: 100%;
     height: 400px;
+    box-sizing: border-box;
 }
 .section4 .black .divleft{
     width: 40%;
@@ -941,6 +942,7 @@ body{
     
     .section4 .black .divleft{
         width: 100%;
+        box-sizing: border-box;
     }
     .section4 .black .divright{
         display: none;
