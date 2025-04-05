@@ -790,14 +790,12 @@
             }
 
             localStorage.setItem('panier', JSON.stringify(panier));
-            // Mettre à jour le nombre d'articles dans le panier dans le header
             updateCartCount()
 
             alert(`${productName} added to cart!`);
         });
 
     });
-
 
 
     // Fonction pour mettre à jour le nombre d'articles dans le panier (dans le header)
