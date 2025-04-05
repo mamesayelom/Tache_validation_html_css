@@ -22,6 +22,10 @@ function afficherPanier() {
 
         // Crée une nouvelle ligne de tableau pour ce produit
         const row = document.createElement("tr");
+
+        //on vérifie si le chemin de l’image commence par "images/", si c le cas on ajoute ../ sinon on ajoute directement produit.image
+        produit.image = produit.image.startsWith("images/") ? "../" + produit.image : produit.image;
+
         row.innerHTML = `
             <td class="flex">
                 <img src="${produit.image}" alt="" style="width: 50px; height: auto;">
