@@ -84,6 +84,23 @@ nav .recherche form button{
 
 nav .recherche a{
     color: #000000;
+    position: relative;
+}
+nav .recherche a span{
+    position: absolute;
+    width:15px;
+    height: 15px; 
+    background-color: red;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    top: -5px;
+    left: 10px;
+    display: none;
 }
 nav .user{
     width: 30px;

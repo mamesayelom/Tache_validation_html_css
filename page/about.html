@@ -37,7 +37,10 @@
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <i class="fa-regular fa-heart"></i>
-                <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="notif">0</span>
+                </a>
                 <div class="user-menu">
                     <span class="user"><i class="fa-regular fa-user"></i></span>
                     <ul class="dropdown-menu">
@@ -243,5 +246,24 @@
             <p>&copy;Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+
+    <script>
+        updateCartCount()
+
+        function updateCartCount() {
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const cartCount = panier.reduce((acc, produit) => acc + produit.quantity, 0); // Nombre total d'articles
+
+    const notif = document.getElementById('notif');
+    console.log("moi"+notif);
+    if (cartCount > 0) {
+        notif.style.display = 'flex'; // Afficher le span
+        notif.textContent = cartCount;  // Mettre à jour le nombre d'articles
+    } else {
+        notif.style.display = 'none';   // Cacher le span si le panier est vide
+    }
+}
+</script>
+
 </body>
 </html>

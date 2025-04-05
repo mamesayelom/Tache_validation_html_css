@@ -37,7 +37,10 @@
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <i class="fa-regular fa-heart"></i>
-                <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="notif">0</span>
+                </a>
                 <div class="user-menu">
                     <span class="user"><i class="fa-regular fa-user"></i></span>
                     <ul class="dropdown-menu">
@@ -756,5 +759,62 @@
             <p>&copy;Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+
+
+    <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            //.closest() = remonter dans les parents jusqu’à trouver un élément qui correspond.
+            const cart = btn.closest('.cart');
+            const productName = cart.querySelector('p').textContent;
+            const productPrice = cart.querySelector('.span1').textContent.replace('$', '');
+            const productImage = cart.querySelector('img').getAttribute('src');
+
+            const product = {
+                name: productName,
+                price: parseFloat(productPrice),
+                image: productImage,
+                quantity: 1
+            };
+
+            let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+            // Vérifie si le produit existe déjà
+            const index = panier.findIndex(p => p.name === product.name);
+            if (index > -1) {
+                panier[index].quantity += 1;
+            } else {
+                panier.push(product);
+            }
+
+            localStorage.setItem('panier', JSON.stringify(panier));
+            // Mettre à jour le nombre d'articles dans le panier dans le header
+            updateCartCount()
+
+            alert(`${productName} added to cart!`);
+        });
+
+    });
+
+
+
+    // Fonction pour mettre à jour le nombre d'articles dans le panier (dans le header)
+function updateCartCount() {
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const cartCount = panier.reduce((acc, produit) => acc + produit.quantity, 0); // Nombre total d'articles
+
+    const notif = document.getElementById('notif');
+    console.log("moi"+notif);
+    if (cartCount > 0) {
+        notif.style.display = 'flex'; // Afficher le span
+        notif.textContent = cartCount;  // Mettre à jour le nombre d'articles
+    } else {
+        notif.style.display = 'none';   // Cacher le span si le panier est vide
+    }
+}
+</script>
+
 </body>
 </html>
