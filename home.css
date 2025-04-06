@@ -6,7 +6,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 .section1{
-    height: 500px;
+    height: 520px;
     padding: 0 60px;
     width: 100%;
     box-sizing: border-box;
@@ -23,16 +23,21 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+.section1 .flex .left span{
+    position: relative;
+}
 .section1 .flex .left a{
     text-decoration: none;
     color: black;
     position: relative;
 }
-.section1 .flex .left i{
+.section1 .flex .left #menu1,.section1 .flex .left #menu2{
+    border: none;
+    background-color: white;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 5px;
+    right: 5px; 
 }
 .section1 .flex .right{
     color: #FAFAFA;
@@ -730,7 +735,22 @@ body{
     transform: translateX(-50%);
 }
 
+.hidden{
+    display: none;
+}
+#menuDeroulante1,#menuDeroulante2{
+    padding: 0;
+    
+}
+#menuDeroulante1 li,#menuDeroulante2 li{
+    list-style: none;
+
+}
+
 @media screen and (max-width:1000px){
+    .section1{
+        height: 600px;
+    }
     .section1 .flex .right .flex1 .left1 h1{
         font-size: 1.5rem;
     }
@@ -779,12 +799,12 @@ body{
 
 @media screen and (max-width:900px){
     .section1{
-        height: 400px;
+        height: 500px;
     }
     .section1 .flex .left{
         width: 18%;
     }
-    .section1 .flex .left a{
+    .section1 .flex .left a,.section1 .flex .left span{
         font-size: 0.8rem;
     }
     .section1 .flex .right{
@@ -794,7 +814,7 @@ body{
 }
 @media screen and (max-width:830px){
     .section1{
-        height: 350px;
+        height: 400px;
     }
     .section1 .flex .right .flex1 .left1 h1{
         margin: 10px 0;
@@ -834,7 +854,7 @@ body{
     .section1 .flex .right .flex1 .left1 h1{
         width: 100%;
     }
-    .section1 .flex .left a{
+    .section1 .flex .left a , .section1 .flex .left span{
         font-size: 0.7rem;
     }
     .section2 .top .top_div2 h1{
@@ -851,7 +871,7 @@ body{
     .section1{
         height: 300px;
     }
-    .section1 .flex .left a{
+    .section1 .flex .left a,.section1 .flex .left span{
         font-size: 0.6rem;
     }
     .section1 .flex .right .flex1 .left1 h1{
@@ -886,7 +906,7 @@ body{
 
 @media screen and (max-width:630px){
     .section1{
-        height: 600px;
+        height: 800px;
     }
     .section1 .flex{
         display: flex;
@@ -896,7 +916,7 @@ body{
         width: 50%;
         border: none;
     }
-    .section1 .flex .left a{
+    .section1 .flex .left a,.section1 .flex .left span{
         font-size: 1rem;
     }
     .section1 .flex .right{
@@ -924,7 +944,7 @@ body{
 
 @media screen and (max-width:600px){
     .section1{
-        height: 700px;
+        height: 800px;
     }
     .section2{
         height: 1800px;
@@ -958,6 +978,7 @@ body{
     }
 }
 @media screen and (max-width:500px){
+    
     .section1,.section2,.section3,.section4,.section5,.section6,.section7{
         padding: 0 20px;
     }

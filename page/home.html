@@ -75,8 +75,30 @@
         <section class="section1">
             <div class="flex">
                 <div class="left">
-                    <a href="">Woman’s Fashion <i class="fa-solid fa-chevron-right"></i></a>
-                    <a href="">Men’s Fashion <i class="fa-solid fa-chevron-right"></i></a>
+                    <span>Woman’s Fashion 
+                        <button id="menu1">
+                            <i id="i1" class="fa-solid fa-chevron-right"></i>
+                            <i style="display: none;" id="i2" class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul id="menuDeroulante1" class="hidden">
+                            <li><a href="#">Skirts</a></li>
+                            <li><a href="#">Jeans & Pants</a></li>
+                            <li><a href="#">Coats & Jackets</a></li>
+                            <li><a href="#">Shoes</a></li>
+                        </ul>
+                    </span>
+                    <span>Men’s Fashion 
+                        <button id="menu2">
+                            <i id="i3" class="fa-solid fa-chevron-right"></i>
+                            <i style="display: none;" id="i4" class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul id="menuDeroulante2" class="hidden">
+                            <li><a href="#">Skirts</a></li>
+                            <li><a href="#">Jeans & Pants</a></li>
+                            <li><a href="#">Coats & Jackets</a></li>
+                            <li><a href="#">Shoes</a></li>
+                        </ul>
+                    </span>
                     <a href="">Electronics</a>
                     <a href="">Home & Lifestyle</a>
                     <a href="">Medicine</a>
@@ -763,6 +785,43 @@
 
     <script>
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const addArrow = document.getElementById("menu1");
+        const addArrow1 = document.getElementById("menu2");
+        const menu = document.getElementById("menuDeroulante1");
+        const menu1 = document.getElementById("menuDeroulante2");
+        const icone1 = document.getElementById("i1");
+        const icone2 = document.getElementById("i2");
+        const icone3 = document.getElementById("i3");
+        const icone4 = document.getElementById("i4");
+
+        const affiche1 = ()=>{
+            menu.classList.toggle("hidden");
+            icone1.style.display="none";
+            icone2.style.display="inline";
+            addArrow.style.top="10%";
+        }
+        const affiche2 = ()=>{
+            menu.classList.toggle("hidden");
+            icone2.style.display="none";
+            icone1.style.display="inline";
+            addArrow.style.top="50%";
+        }
+        const affiche3 = ()=>{
+            menu1.classList.toggle("hidden");
+            icone3.style.display="none";
+            icone4.style.display="inline";
+            addArrow1.style.top="10%";
+        }
+        const affiche4 = ()=>{
+            menu1.classList.toggle("hidden");
+            icone4.style.display="none";
+            icone3.style.display="inline";
+            addArrow1.style.top="50%";
+        }
+        icone1.addEventListener("click", affiche1);
+        icone2.addEventListener("click", affiche2);
+        icone3.addEventListener("click", affiche3);
+        icone4.addEventListener("click", affiche4);
 
     addToCartButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -804,7 +863,6 @@ function updateCartCount() {
     const cartCount = panier.reduce((acc, produit) => acc + produit.quantity, 0); // Nombre total d'articles
 
     const notif = document.getElementById('notif');
-    console.log("moi"+notif);
     if (cartCount > 0) {
         notif.style.display = 'flex'; // Afficher le span
         notif.textContent = cartCount;  // Mettre à jour le nombre d'articles
