@@ -72,8 +72,7 @@
     <main>
         <section class="section1">
             <div class="flex">
-                <div class="left">
-                    <span>Woman’s Fashion 
+                <div class="left"><span>Woman’s Fashion 
                         <button id="menu1">
                             <i id="i1" class="fa-solid fa-chevron-right"></i>
                             <i style="display: none;" id="i2" class="fa-solid fa-chevron-down"></i>
@@ -85,6 +84,7 @@
                             <li><a href="#">Shoes</a></li>
                         </ul>
                     </span>
+                    
                     <span>Men’s Fashion 
                         <button id="menu2">
                             <i id="i3" class="fa-solid fa-chevron-right"></i>
@@ -171,7 +171,7 @@
             </div>
 
             <div class="bottom">
-                <div class="cart">
+                <!-- <div class="cart">
                     <div class="div_img">
                         <img src="images/home/g92-2-500x500 1.png" alt="">
                         <span class="absolute">-40%</span>
@@ -259,7 +259,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(99)</span>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
             <a class="button" href="">View All Products</a>
@@ -279,8 +279,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom">
-                <div>
+            <div id="category-container" class="bottom">
+                <!-- <div>
                     <img src="images/home/Category-CellPhone.png" alt="">
                     <p>Phones</p>
                 </div>
@@ -303,7 +303,7 @@
                 <div>
                     <img src="images/home/Category-Gamepad.png" alt="">
                     <p>Gaming</p>
-                </div>
+                </div> -->
             </div>
             <div class="relative"></div>
         </section>
@@ -318,8 +318,8 @@
                     <a class="rightbutton" href="">View All Products</a>   
                 </div>
             </div>
-            <div class="bottom">
-                <div class="cart">
+            <div id="product-container" class="bottom">
+                <!-- <div class="cart">
                     <div class="div_img">
                         <img src="images/home/Frame 605.png" alt="">
                         <span class="icon-absolute icon-1"><i class="fa-regular fa-eye"></i></span>
@@ -403,8 +403,8 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(99)</span>
                     </div>
-                </div>
-                
+                </div> -->
+
             </div>
             <div class="black">
                 <div class="divleft">
@@ -449,8 +449,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom">
-                <div class="cart">
+            <div class="bottom" id="productsContainer">
+                <!-- <div class="cart">
                     <div class="div_img">
                         <img src="images/home/1.png" alt="">
                         <span class="icon-absolute icon-1"><i class="fa-regular fa-eye"></i></span>
@@ -491,8 +491,8 @@
                         <i class="fa-solid fa-star"></i>
                         <i style="color: rgb(0, 0, 0,0.2);" class="fa-solid fa-star"></i>
                         <span>(75)</span>
-                    </div>
-                </div>
+                    </div> 
+                </div> 
                 <div class="cart">
                     <div class="div_img">
                         <img src="images/home/3.png" alt="">
@@ -534,11 +534,11 @@
                         <i style="color: rgb(0, 0, 0,0.2);" class="fa-solid fa-star"></i>
                         <span>(99)</span>
                     </div>
-                </div>
-                
+                </div> -->
+
             </div>
-            <div class="bottom">
-                <div class="cart">
+            <div class="bottom" id="produitsContainer">
+                <!-- <div class="cart">
                     <div class="div_img">
                         <img src="images/home/5.png" alt="">
                         <a class="absolute">NEW</a>
@@ -641,7 +641,7 @@
                             <span class="circle"></span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
             <a class="button" href="">View All Products</a>
@@ -781,94 +781,6 @@
     </footer>
 
 
-    <script>
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const addArrow = document.getElementById("menu1");
-        const addArrow1 = document.getElementById("menu2");
-        const menu = document.getElementById("menuDeroulante1");
-        const menu1 = document.getElementById("menuDeroulante2");
-        const icone1 = document.getElementById("i1");
-        const icone2 = document.getElementById("i2");
-        const icone3 = document.getElementById("i3");
-        const icone4 = document.getElementById("i4");
-
-        const affiche1 = ()=>{
-            menu.classList.toggle("hidden");
-            icone1.style.display="none";
-            icone2.style.display="inline";
-            addArrow.style.top="10%";
-        }
-        const affiche2 = ()=>{
-            menu.classList.toggle("hidden");
-            icone2.style.display="none";
-            icone1.style.display="inline";
-            addArrow.style.top="50%";
-        }
-        const affiche3 = ()=>{
-            menu1.classList.toggle("hidden");
-            icone3.style.display="none";
-            icone4.style.display="inline";
-            addArrow1.style.top="10%";
-        }
-        const affiche4 = ()=>{
-            menu1.classList.toggle("hidden");
-            icone4.style.display="none";
-            icone3.style.display="inline";
-            addArrow1.style.top="50%";
-        }
-        icone1.addEventListener("click", affiche1);
-        icone2.addEventListener("click", affiche2);
-        icone3.addEventListener("click", affiche3);
-        icone4.addEventListener("click", affiche4);
-    
-        addToCartButtons.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                //.closest() = remonter dans les parents jusqu’à trouver un élément qui correspond.
-                const cart = btn.closest('.cart');
-                const productName = cart.querySelector('p').textContent;
-                const productPrice = cart.querySelector('.span1').textContent.replace('$', '');
-                const productImage = cart.querySelector('img').getAttribute('src');
-    
-                const product = {
-                    name: productName,
-                    price: parseFloat(productPrice),
-                    image: productImage,
-                    quantity: 1
-                };
-    
-                let panier = JSON.parse(localStorage.getItem('panier')) || [];
-    
-                // Vérifie si le produit existe déjà
-                const index = panier.findIndex(p => p.name === product.name);
-                if (index > -1) {
-                    panier[index].quantity += 1;
-                } else {
-                    panier.push(product);
-                }
-    
-                localStorage.setItem('panier', JSON.stringify(panier));
-                updateCartCount()
-    
-                alert(`${productName} added to cart!`);
-            });
-    
-        });
-    
-    
-        // Fonction pour mettre à jour le nombre d'articles dans le panier (dans le header)
-    function updateCartCount() {
-        const panier = JSON.parse(localStorage.getItem('panier')) || [];
-        const cartCount = panier.reduce((acc, produit) => acc + produit.quantity, 0); // Nombre total d'articles
-    
-        const notif = document.getElementById('notif');
-        console.log("moi"+notif);
-        if (cartCount > 0) {
-            notif.style.display = 'flex'; // Afficher le span
-            notif.textContent = cartCount;  // Mettre à jour le nombre d'articles
-        } else {
-            notif.style.display = 'none';   // Cacher le span si le panier est vide
-        }
-    }
-    </script>
+    <script src="App.js"></script>
 </body>
 </html>
